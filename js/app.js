@@ -30,17 +30,17 @@ var secretNumber = function() {
 //GUESS Functionaliyu	
 var guess = function(userInput) {
 
-    if (userInput != "") {
+	var distanceFromNum = Math.abs(userInput - globalSecretNum);
+	
+	if(userInput <1 || userInput > 100){$('#feedback').text('Enter a number between 1 and 100')}
+		
+    else if (userInput != "") {
 	$("ul#guessList").append("<li>"+userInput+"</li>");
         guessCounter();
         resetGuess();
         console.log("user Input:" + userInput + "Number is:" + globalSecretNum);
-	
-		
-		var distanceFromNum = Math.abs(userInput - globalSecretNum);
-		console.log(distanceFromNum);
-        //hot
-	
+        
+		//hot
         if (distanceFromNum == 0) {
             $("#feedback").text("you got it!")
         } else if (distanceFromNum <= 5) {
@@ -60,8 +60,8 @@ var guess = function(userInput) {
         }
 
     }
-
-
+	
+	
 };
 
 //The Guess Counter
