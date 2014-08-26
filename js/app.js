@@ -43,15 +43,15 @@ var guess = function(userInput) {
 	
         if (distanceFromNum == 0) {
             $("#feedback").text("you got it!")
-        } else if (distanceFromNum <= 5 && distanceFromNum >=5) {
+        } else if (distanceFromNum >= 5 && distanceFromNum <=5) {
             $("#feedback").text("you be getting hot!!");
         }
         //warm
-        else if (distanceFromNum <= 15 && distanceFromNum >=15) {
+        else if (distanceFromNum >= 15 && distanceFromNum <=15) {
              $("#feedback").text("you be gettin warmer!!");
         }
         //cold
-        else if (distanceFromNum <= 30 && distanceFromNum >=30) {
+        else if (distanceFromNum >= 30 && distanceFromNum <=30) {
             $("#feedback").text("you be cold!!");
         }
         //ice cold
