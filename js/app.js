@@ -37,21 +37,21 @@ var guess = function(userInput) {
         console.log("user Input:" + userInput + "Number is:" + globalSecretNum);
 	
 		
-		var userGuessMinusSecretNumber = Math.abs(userInput - globalSecretNum);
-		console.log(userGuessMinusSecretNumber);
+		var distanceFromNum = Math.abs(userInput - globalSecretNum);
+		console.log(distanceFromNum);
         //hot
 	
-        if (userGuessMinusSecretNumber == 0) {
+        if (distanceFromNum == 0) {
             $("#feedback").text("you got it!")
-        } else if (userGuessMinusSecretNumber <= 5) {
+        } else if (distanceFromNum <= 5 && distanceFromNum >=5) {
             $("#feedback").text("you be getting hot!!");
         }
         //warm
-        else if (userGuessMinusSecretNumber <= 15) {
+        else if (distanceFromNum <= 15 && distanceFromNum >=15) {
              $("#feedback").text("you be gettin warmer!!");
         }
         //cold
-        else if (userGuessMinusSecretNumber <= 30) {
+        else if (distanceFromNum <= 30 && distanceFromNum >=30) {
             $("#feedback").text("you be cold!!");
         }
         //ice cold
