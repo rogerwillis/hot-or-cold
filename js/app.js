@@ -32,7 +32,7 @@ var guess = function(userInput) {
 
 	var distanceFromNum = Math.abs(userInput - globalSecretNum);
 	
-	if(userInput <1 || userInput > 100){$('#feedback').text('Enter a number between 1 and 100')}
+	if(userInput < 1 || userInput > 100 || userInput % 1 != 0){$('#feedback').text('Enter a number between 1 and 100')}
 		
     else if (userInput != "") {
 	$("ul#guessList").append("<li>"+userInput+"</li>");
@@ -42,7 +42,8 @@ var guess = function(userInput) {
         
 		//hot
         if (distanceFromNum == 0) {
-            $("#feedback").text("you got it!")
+            $("#feedback").text("you got it!");
+			$("#userGuess").attr("disabled",true);
         } else if (distanceFromNum <= 5) {
             $("#feedback").text("you be getting hot!!");
         }
